@@ -196,6 +196,8 @@
   <meta name="msapplication-TileColor" content="#0d0f18" />
   <meta name="msapplication-TileImage" content="favicon-144.png" />
 
+  <!-- Google AdSense — activate when approved -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
   <!-- ═══════════════════════════════════════════════════════
        PERFORMANCE
   ═══════════════════════════════════════════════════════ -->
@@ -211,6 +213,28 @@
     code,pre,.mono{font-family:'Space Mono',monospace}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.032'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
     .gbg{position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,.04) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 40%,transparent 100%);pointer-events:none}
+
+
+    /* ═══════════════════════════════════════════════════
+       AD SLOTS — professional, non-intrusive placement
+    ═══════════════════════════════════════════════════ */
+    .ad-slot{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;justify-content:center;align-items:center}
+    .ad-slot-inner{background:var(--bgc);border:1px solid var(--bd);border-radius:10px;padding:4px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+    .ad-label{font-family:'Space Mono',monospace;font-size:9px;color:var(--t3);letter-spacing:1px;text-transform:uppercase;text-align:center;padding:2px 0}
+    /* Carbon Ads native style override */
+    #carbonads{font-family:'Space Mono',monospace;display:flex;flex-direction:column;width:130px}
+    #carbonads a{text-decoration:none;color:var(--t2)}
+    #carbonads .carbon-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    #carbonads .carbon-img img{border-radius:6px;display:block;width:130px;height:100px;object-fit:cover}
+    #carbonads .carbon-text{font-size:11px;line-height:1.5;color:var(--t2);margin-top:4px}
+    #carbonads .carbon-poweredby{font-size:9px;color:var(--t3);margin-top:6px;display:block}
+    /* AdSense responsive */
+    .adsbygoogle{display:block;border-radius:8px;overflow:hidden}
+    /* Strip between stats and features */
+    .ad-strip{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:16px 5%;display:flex;justify-content:center}
+    /* Sidebar-style ad before install */
+    .ad-before-install{padding:32px 5% 0;display:flex;justify-content:center}
+    @media(max-width:720px){#carbonads,.adsbygoogle{width:100%!important}}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(7,8,12,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:background .3s}
@@ -682,6 +706,25 @@
     <div class="stat"><div class="sn">120k→4k</div><div class="sl">Token Compression</div></div>
     <div class="stat"><div class="sn">EN/RU</div><div class="sl">Full i18n</div></div>
     <div class="stat"><div class="sn">100%</div><div class="sl">Offline Capable</div></div>
+  </div>
+</div>
+
+
+<!-- ─── AD SLOT 1: between stats and features (high visibility) ─── -->
+<div class="ad-strip">
+  <div class="ad-slot-inner">
+    <span class="ad-label">Sponsored</span>
+    <!-- CARBON ADS: replace this comment with Carbon script when approved
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=YOUR_CODE&placement=codesherlocksdev" id="_carbonads_js"></script>
+    -->
+    <!-- GOOGLE ADSENSE: replace with AdSense code when approved
+    <ins class="adsbygoogle" style="display:block;width:728px;height:90px"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
   </div>
 </div>
 
@@ -1218,6 +1261,15 @@
     </div>
   </div>
 </section>
+
+
+<!-- ─── AD SLOT 2: before install (high intent moment) ─── -->
+<div class="ad-before-install">
+  <div class="ad-slot-inner">
+    <span class="ad-label">Sponsored</span>
+    <!-- INSERT AD CODE HERE WHEN APPROVED -->
+  </div>
+</div>
 
 <!-- ─── INSTALL ─── -->
 <section id="install">
