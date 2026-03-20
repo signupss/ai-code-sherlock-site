@@ -1,0 +1,17 @@
+{
+  "name": "AI Code Sherlock",
+  "short_name": "AI Sherlock",
+  "description": "AI-powered IDE assistant for code analysis, autonomous patching and improvement pipelines",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#07080c",
+  "theme_color": "#6366f1",
+  "lang": "en",
+  "icons": [
+    { "src": "favicon-16.png",      "sizes": "16x16",   "type": "image/png" },
+    { "src": "favicon-32.png",      "sizes": "32x32",   "type": "image/png" },
+    { "src": "favicon-144.png",     "sizes": "144x144", "type": "image/png" },
+    { "src": "apple-touch-icon.png","sizes": "180x180", "type": "image/png" }
+  ],
+  "categories": ["developer-tools", "productivity", "utilities"]
+}

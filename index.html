@@ -1,13 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Code Sherlock — The Ultimate AI Detective for Your Codebase</title>
-  <meta name="description" content="AI-powered IDE assistant for intelligent code analysis, autonomous improvement pipelines, surgical patching, and automated root-cause debugging. Local-first with Ollama." />
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRIMARY SEO
+  ═══════════════════════════════════════════════════════ -->
+  <title>AI Code Sherlock — AI-Powered IDE Assistant for Code Analysis & Auto-Patching</title>
+  <meta name="description" content="AI Code Sherlock is a free open-source IDE assistant that automatically finds bugs, generates surgical code patches, and runs autonomous improvement pipelines. Works offline with Ollama, OpenAI, Gemini, and any OpenAI-compatible API." />
+  <meta name="keywords" content="AI code assistant, code debugging AI, automatic code patching, autonomous code improvement, Ollama IDE, AI IDE, code analysis tool, LLM coding assistant, auto patch code, AI bug fixer, code sherlock, PyQt6 IDE, local AI coding, deepseek coder, open source AI developer tools, surgical patching, SEARCH REPLACE patches, ai pipeline, code improvement pipeline" />
+  <meta name="author" content="AI Code Sherlock" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://ai-code-sherlock-site.vercel.app/" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       OPEN GRAPH (Facebook, LinkedIn, Telegram, Discord)
+  ═══════════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ai-code-sherlock-site.vercel.app/" />
+  <meta property="og:site_name" content="AI Code Sherlock" />
+  <meta property="og:title" content="AI Code Sherlock — AI-Powered IDE for Code Analysis & Auto-Patching" />
+  <meta property="og:description" content="Free open-source IDE assistant: automatic bug detection, surgical SEARCH/REPLACE patches, 8 AI strategies, autonomous improvement pipelines, Ollama offline support." />
+  <meta property="og:image" content="https://ai-code-sherlock-site.vercel.app/screenshot.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:image:alt" content="AI Code Sherlock — 4-panel IDE interface with file explorer, code editor, AI chat, and patch review panel" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       TWITTER / X CARD
+  ═══════════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@signupss" />
+  <meta name="twitter:creator" content="@signupss" />
+  <meta name="twitter:title" content="AI Code Sherlock — AI IDE for Code Analysis & Auto-Patching" />
+  <meta name="twitter:description" content="Free open-source AI IDE: auto bug fix, surgical patches, 8 strategies, Ollama offline, Gemini/GPT-4o/Groq support." />
+  <meta name="twitter:image" content="https://ai-code-sherlock-site.vercel.app/screenshot.png" />
+  <meta name="twitter:image:alt" content="AI Code Sherlock interface screenshot" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCHEMA.ORG STRUCTURED DATA (for AI & search engines)
+  ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ai-code-sherlock-site.vercel.app/#app",
+        "name": "AI Code Sherlock",
+        "alternateName": ["AI Code Sherlock IDE", "Sherlock AI", "Code Sherlock"],
+        "description": "AI Code Sherlock is a free, open-source desktop IDE assistant that uses local (Ollama) or cloud AI models to automatically detect bugs, generate surgical SEARCH/REPLACE patches, and run autonomous improvement pipelines. It never rewrites entire files — only the exact blocks that need changing.",
+        "url": "https://ai-code-sherlock-site.vercel.app/",
+        "downloadUrl": "https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip",
+        "installUrl": "https://github.com/signupss/ai-code-sherlock",
+        "softwareVersion": "2.1.0",
+        "releaseNotes": "New Project Mode, Consensus Engine, full EN/RU i18n, Save-as-File button, responsive screenshot section",
+        "datePublished": "2024-01-01",
+        "dateModified": "2025-03-20",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "IDE, Code Analysis, AI Assistant",
+        "operatingSystem": ["Windows 10", "Windows 11", "macOS 12+", "Linux Ubuntu 20+"],
+        "softwareRequirements": "Python 3.11+, PyQt6, aiohttp, aiofiles",
+        "programmingLanguage": "Python",
+        "license": "https://opensource.org/licenses/MIT",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "image": "https://ai-code-sherlock-site.vercel.app/screenshot.png",
+        "screenshot": "https://ai-code-sherlock-site.vercel.app/screenshot.png",
+        "featureList": [
+          "Auto-Improve Pipeline with 8 AI strategies",
+          "Sherlock Mode — automated root-cause error analysis",
+          "Surgical SEARCH/REPLACE patching — never rewrites entire files",
+          "Consensus Engine — query multiple AI models simultaneously",
+          "New Project Mode — AI generates files from description",
+          "AST context compression — 120k tokens to 4k without losing signal",
+          "Error Map — persistent database of errors and confirmed solutions",
+          "Smart log compression — preserves 100% of errors and tracebacks",
+          "Universal file reader — xlsx, parquet, numpy, pickle, HTML, JSON",
+          "Full EN/RU internationalization",
+          "Offline-first with Ollama — no API key required",
+          "Version control — every patch backed up, one-click restore",
+          "ZennoPoster File Signal IPC integration"
+        ],
+        "keywords": "AI code assistant, code debugging, automatic patching, Ollama IDE, code analysis, LLM coding, autonomous improvement, open source",
+        "author": {
+          "@type": "Person",
+          "name": "signupss",
+          "url": "https://github.com/signupss"
+        },
+        "maintainer": {
+          "@type": "Person",
+          "name": "signupss",
+          "url": "https://github.com/signupss"
+        },
+        "codeRepository": "https://github.com/signupss/ai-code-sherlock",
+        "sameAs": [
+          "https://github.com/signupss/ai-code-sherlock"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ai-code-sherlock-site.vercel.app/#website",
+        "url": "https://ai-code-sherlock-site.vercel.app/",
+        "name": "AI Code Sherlock",
+        "description": "Official landing page for AI Code Sherlock — free AI-powered IDE assistant",
+        "inLanguage": ["en", "ru"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://github.com/signupss/ai-code-sherlock/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ai-code-sherlock-site.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is AI Code Sherlock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI Code Sherlock is a free, open-source desktop IDE assistant that uses local (Ollama) or cloud AI models to automatically detect bugs, generate surgical code patches, and run autonomous improvement pipelines without rewriting entire files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AI Code Sherlock work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. AI Code Sherlock works 100% offline with Ollama. Just run ollama serve and pull any model (deepseek-coder-v2, codestral, llama3, mistral). No API key or internet connection required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AI models does AI Code Sherlock support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI Code Sherlock supports Ollama (any local model), OpenAI GPT-4o, Gemini 2.0 Flash, Groq, Mistral, Together AI, LM Studio, Kobold.cpp, and any OpenAI-compatible API endpoint."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Auto-Improve Pipeline work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You set a goal (e.g. achieve f1 > 0.85), choose a script, pick one of 8 AI strategies, and set a max iteration limit. The pipeline runs your script, reads the output, generates a patch, validates syntax, applies it, re-runs, and repeats autonomously until the goal is reached."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is AI Code Sherlock free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, AI Code Sherlock is completely free and open-source under the MIT License. You can download, modify, and distribute it freely."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ADDITIONAL AI / LLM DISCOVERABILITY
+       (helps ChatGPT, Claude, Perplexity, Gemini index this)
+  ═══════════════════════════════════════════════════════ -->
+  <meta name="application-name" content="AI Code Sherlock" />
+  <meta name="category" content="Developer Tools, IDE, AI Assistant" />
+  <meta name="classification" content="Software, Open Source, Developer Tools" />
+  <meta name="subject" content="AI-powered IDE assistant for code analysis and autonomous patching" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="Global" />
+  <meta name="rating" content="General" />
+  <meta name="language" content="en, ru" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="generator" content="AI Code Sherlock v2.1" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAVICON — SVG inline (works everywhere, sharp at any size)
+  ═══════════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3ClinearGradient id='gl' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230d0f18'/%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)' opacity='.15'/%3E%3Ccircle cx='27' cy='25' r='11' fill='none' stroke='url(%23gl)' stroke-width='3.5'/%3E%3Cline x1='35' y1='33' x2='50' y2='48' stroke='url(%23gl)' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='27' cy='25' r='4' fill='url(%23gl)' opacity='.9'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#6366f1" />
+  <meta name="msapplication-TileColor" content="#0d0f18" />
+  <meta name="msapplication-TileImage" content="favicon-144.png" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       PERFORMANCE
+  ═══════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="screenshot.png" as="image" />
   <style>
     :root{--bg:#07080c;--bg2:#0d0f18;--bgc:#0f1219;--bd:rgba(99,102,241,.14);--bdh:rgba(99,102,241,.38);--bl:#6366f1;--cy:#22d3ee;--gn:#10b981;--pu:#a855f7;--yw:#f59e0b;--rd:#f87171;--t1:#e2e8f0;--t2:#94a3b8;--t3:#475569}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
