@@ -8,8 +8,8 @@
        PRIMARY SEO
   ═══════════════════════════════════════════════════════ -->
   <title>AI Code Sherlock — AI-Powered IDE Assistant for Code Analysis & Auto-Patching</title>
-  <meta name="description" content="AI Code Sherlock is a free open-source IDE assistant that automatically finds bugs, generates surgical code patches, and runs autonomous improvement pipelines. Works offline with Ollama, OpenAI, Gemini, and any OpenAI-compatible API." />
-  <meta name="keywords" content="AI code assistant, code debugging AI, automatic code patching, autonomous code improvement, Ollama IDE, AI IDE, code analysis tool, LLM coding assistant, auto patch code, AI bug fixer, code sherlock, PyQt6 IDE, local AI coding, deepseek coder, open source AI developer tools, surgical patching, SEARCH REPLACE patches, ai pipeline, code improvement pipeline" />
+  <meta name="description" content="AI Code Sherlock is a free open-source IDE assistant that automatically finds bugs, generates surgical code patches, runs autonomous improvement pipelines, and executes scripts with live interactive stdin. Supports 15+ languages. Works offline with Ollama, OpenAI, Gemini, and any OpenAI-compatible API." />
+  <meta name="keywords" content="AI code assistant, code debugging AI, automatic code patching, autonomous code improvement, Ollama IDE, AI IDE, code analysis tool, LLM coding assistant, auto patch code, AI bug fixer, code sherlock, PyQt6 IDE, local AI coding, deepseek coder, open source AI developer tools, surgical patching, SEARCH REPLACE patches, ai pipeline, code improvement pipeline, interactive script runner, live stdin, run scripts ide, script runner python js ruby php go lua, 15 language support" />
   <meta name="author" content="AI Code Sherlock" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://ai-code-sherlock-site.vercel.app/" />
   <meta property="og:site_name" content="AI Code Sherlock" />
   <meta property="og:title" content="AI Code Sherlock — AI-Powered IDE for Code Analysis & Auto-Patching" />
-  <meta property="og:description" content="Free open-source IDE assistant: automatic bug detection, surgical SEARCH/REPLACE patches, 8 AI strategies, autonomous improvement pipelines, Ollama offline support." />
+  <meta property="og:description" content="Free open-source IDE assistant: automatic bug detection, surgical SEARCH/REPLACE patches, 8 AI strategies, autonomous improvement pipelines, interactive script runner for 15+ languages, Ollama offline support." />
   <meta property="og:image" content="https://ai-code-sherlock-site.vercel.app/screenshot.png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
@@ -37,7 +37,7 @@
   <meta name="twitter:site" content="@signupss" />
   <meta name="twitter:creator" content="@signupss" />
   <meta name="twitter:title" content="AI Code Sherlock — AI IDE for Code Analysis & Auto-Patching" />
-  <meta name="twitter:description" content="Free open-source AI IDE: auto bug fix, surgical patches, 8 strategies, Ollama offline, Gemini/GPT-4o/Groq support." />
+  <meta name="twitter:description" content="Free open-source AI IDE: auto bug fix, surgical patches, 8 strategies, interactive stdin for 15+ languages, Ollama offline, Gemini/GPT-4o/Groq support." />
   <meta name="twitter:image" content="https://ai-code-sherlock-site.vercel.app/screenshot.png" />
   <meta name="twitter:image:alt" content="AI Code Sherlock interface screenshot" />
 
@@ -57,10 +57,10 @@
         "url": "https://ai-code-sherlock-site.vercel.app/",
         "downloadUrl": "https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip",
         "installUrl": "https://github.com/signupss/ai-code-sherlock",
-        "softwareVersion": "2.1.0",
-        "releaseNotes": "New Project Mode, Consensus Engine, full EN/RU i18n, Save-as-File button, responsive screenshot section",
+        "softwareVersion": "2.2.0",
+        "releaseNotes": "Interactive stdin for 15+ script languages, live output streaming to Logs tab, queue-based stdin pump, shebang auto-detection, scroll fixes, i18n expansion",
         "datePublished": "2024-01-01",
-        "dateModified": "2025-03-20",
+        "dateModified": "2025-03-22",
         "applicationCategory": "DeveloperApplication",
         "applicationSubCategory": "IDE, Code Analysis, AI Assistant",
         "operatingSystem": ["Windows 10", "Windows 11", "macOS 12+", "Linux Ubuntu 20+"],
@@ -88,7 +88,12 @@
           "Full EN/RU internationalization",
           "Offline-first with Ollama — no API key required",
           "Version control — every patch backed up, one-click restore",
-          "ZennoPoster File Signal IPC integration"
+          "ZennoPoster File Signal IPC integration",
+          "Interactive stdin — send live input to running scripts from the IDE",
+          "15+ script languages — Python, JS, TS, Ruby, PHP, Go, Lua, Perl, R, Julia, Shell, Batch, PowerShell, shebang auto-detection",
+          "Live script output streaming to dedicated Logs tab",
+          "Queue-based stdin pump — no race conditions, no closed-pipe errors",
+          "Scroll-enabled sub-panels — Logs, Context, Signals, Auto-run tabs"
         ],
         "keywords": "AI code assistant, code debugging, automatic patching, Ollama IDE, code analysis, LLM coding, autonomous improvement, open source",
         "author": {
@@ -161,6 +166,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes, AI Code Sherlock is completely free and open-source under the MIT License. You can download, modify, and distribute it freely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I send input to a running script from inside AI Code Sherlock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. When you run a script via the Run Script button, the Logs tab shows live stdout and stderr output and activates an interactive stdin field at the bottom. You can type any input and press Enter to send it directly to the running process — works for Python input(), bash read, Node readline, Ruby gets, PHP fgets(STDIN), and all other language stdin mechanisms. The stdin pipe stays open for the entire duration of the script."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which scripting languages can AI Code Sherlock run?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI Code Sherlock's Script Runner supports 15+ languages: Python (.py), JavaScript (.js, .mjs), TypeScript (.ts via ts-node), Ruby (.rb), PHP (.php), Go (.go via go run), Lua (.lua), Perl (.pl), R (.r via Rscript), Julia (.jl), Bash/Shell (.sh, .bash), Windows Batch (.bat, .cmd), and PowerShell (.ps1). For unknown extensions it auto-detects the interpreter from the file's shebang line, and falls back to direct execution for chmod+x files."
             }
           }
         ]
@@ -581,6 +602,39 @@
     .flegal a{font-family:'Space Mono',monospace;font-size:11px;color:var(--t3);text-decoration:none}
     .flegal a:hover{color:var(--t2)}
 
+    /* LIVE EXEC */
+    .le-sec{background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%)}
+    .le-grid{max-width:1200px;margin:52px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .le-langs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+    .le-lang{background:var(--bgc);border:1px solid var(--bd);border-radius:9px;padding:12px 14px;display:flex;align-items:center;gap:10px;transition:border-color .3s}
+    .le-lang:hover{border-color:var(--bdh)}
+    .le-lico{font-size:18px;flex-shrink:0}
+    .le-lname{font-size:12px;font-weight:700}
+    .le-lext{font-family:'Space Mono',monospace;font-size:10px;color:var(--t3);margin-top:1px}
+    .le-term{background:#060810;border:1px solid rgba(99,102,241,.2);border-radius:12px;overflow:hidden}
+    .le-h{background:#0b0e1a;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(99,102,241,.1)}
+    .le-htl{font-family:'Space Mono',monospace;font-size:10px;color:var(--t3);letter-spacing:1px}
+    .le-badge{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px}
+    .le-badge.run{background:rgba(16,185,129,.14);color:var(--gn)}
+    .le-badge.wait{background:rgba(245,158,11,.12);color:var(--yw)}
+    .le-out{padding:16px;font-family:'Space Mono',monospace;font-size:11px;line-height:1.85;max-height:260px;overflow:hidden}
+    .le-out .lo{display:block;color:var(--t2)}
+    .le-out .le{display:block;color:var(--rd)}
+    .le-out .ls{display:block;color:var(--gn)}
+    .le-out .lp{display:block;color:var(--yw)}
+    .le-stdin{background:#050710;border-top:1px solid rgba(99,102,241,.1);padding:10px 14px;display:flex;align-items:center;gap:8px}
+    .le-stdin-prompt{font-family:'Space Mono',monospace;font-size:12px;color:var(--t3)}
+    .le-stdin-field{flex:1;background:#0d1020;border:1px solid rgba(99,102,241,.2);border-radius:5px;padding:5px 10px;font-family:'Space Mono',monospace;font-size:11px;color:var(--t1)}
+    .le-stdin-btn{background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);color:var(--bl);font-family:'Space Mono',monospace;font-size:11px;padding:4px 10px;border-radius:5px;cursor:pointer}
+    .le-feats{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+    .le-feat{display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--bgc);border:1px solid var(--bd);border-radius:9px;transition:border-color .3s}
+    .le-feat:hover{border-color:var(--bdh)}
+    .le-fico{font-size:18px;flex-shrink:0;margin-top:2px}
+    .le-ft{font-size:13px;font-weight:700;margin-bottom:3px}
+    .le-fd{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--t2);line-height:1.6}
+    @media(max-width:1060px){.le-grid{grid-template-columns:1fr}.le-langs{grid-template-columns:repeat(4,1fr)}}
+    @media(max-width:720px){.le-langs{grid-template-columns:repeat(2,1fr)}}
+
     ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(99,102,241,.3);border-radius:4px}::-webkit-scrollbar-thumb:hover{background:rgba(99,102,241,.5)}
     ::selection{background:rgba(99,102,241,.3);color:#fff}
 
@@ -628,6 +682,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#screenshot">Screenshot</a></li>
     <li><a href="#pipeline">Pipeline</a></li>
+    <li><a href="#live-exec">Live Exec</a></li>
     <li><a href="#new-project">New Project</a></li>
     <li><a href="#sherlock-mode">Sherlock</a></li>
     <li><a href="#consensus">Consensus</a></li>
@@ -636,7 +691,7 @@
   </ul>
   <div class="nact">
     <a href="#install" class="btn bo">Install</a>
-    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp">⬇ Download</a>
+    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp">⬇ Download v2.2</a>
   </div>
 </nav>
 
@@ -645,7 +700,7 @@
   <div class="gbg"></div>
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 
-  <div class="hbadge">v2.1 — New Project Mode · Consensus Engine · Full i18n</div>
+  <div class="hbadge">v2.2 — Interactive Script Runner · 15+ Languages · Live Logs</div>
 
   <h1>
     <span class="hp">The Ultimate AI Detective</span>
@@ -654,11 +709,11 @@
 
   <p class="hsub">
     Surgical patching · 8 AI strategies · Autonomous improvement loops<br>
-    Local-first Ollama · Consensus Engine · EN/RU i18n · Zero codebase exposure
+    Live script execution · Interactive stdin · 15+ languages · Offline-first
   </p>
 
   <div class="hctas">
-    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp blg bgrad" download>⬇&nbsp; Download v2.1</a>
+    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp blg bgrad" download>⬇&nbsp; Download v2.2</a>
     <a href="#pipeline" class="btn bo blg">⚙&nbsp; Auto-Improve Pipeline</a>
     <a href="https://github.com/signupss/ai-code-sherlock" class="btn bo blg" target="_blank" rel="noopener">⭐&nbsp; GitHub</a>
   </div>
@@ -699,8 +754,9 @@
 
 <!-- ─── STATS ─── -->
 <div class="sstrip">
-  <div class="sgrd">
+  <div class="sgrd" style="grid-template-columns:repeat(7,1fr)">
     <div class="stat"><div class="sn">8</div><div class="sl">AI Strategies</div></div>
+    <div class="stat"><div class="sn">15+</div><div class="sl">Script Languages</div></div>
     <div class="stat"><div class="sn">55+</div><div class="sl">Unit Tests</div></div>
     <div class="stat"><div class="sn">4</div><div class="sl">Consensus Modes</div></div>
     <div class="stat"><div class="sn">120k→4k</div><div class="sl">Token Compression</div></div>
@@ -784,6 +840,12 @@
       <div class="cdsc">Describe what to build — AI generates the file with the correct extension, saves it, opens it. Python, JS, Go, Rust, Java — any language.</div>
     </div>
     <div class="card s3 rv d2">
+      <div class="cico ign">▶️</div>
+      <div class="ctit">Live Script Execution</div>
+      <div class="cdsc">15+ languages. Real-time stdout/stderr to Logs tab. Interactive stdin field — send input to your running script without leaving the IDE. Queue-based, no race conditions.</div>
+      <div class="chips"><span class="chip hgn">15+ Langs</span><span class="chip hcy">stdin Live</span></div>
+    </div>
+    <div class="card s3 rv d3">
       <div class="cico ign">🌍</div>
       <div class="ctit">Full EN / RU i18n</div>
       <div class="cdsc">All UI labels, dialogs, system messages, tooltips, chat bubbles translated. Switch language live in Settings without restart.</div>
@@ -809,7 +871,7 @@
     <div class="scr-frame">
       <div class="scr-bar">
         <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
-        <div class="scr-btl">AI Code Sherlock v2.1 — data_universe.py — gemini-2.0-flash-preview</div>
+        <div class="scr-btl">AI Code Sherlock v2.2 — data_universe.py — gemini-2.0-flash-preview</div>
       </div>
       <!-- Try real screenshot first, fallback to mockup via JS -->
       <img src="screenshot.png" alt="AI Code Sherlock interface — 4 panel layout with file tree, code editor, AI chat, and patch review" class="scr-img" id="scrImg" onerror="this.style.display='none';document.getElementById('scrMock').style.display='grid'" />
@@ -899,7 +961,6 @@
     </div>
   </div>
 
-  <!-- Caption row -->
   <div class="scr-caption rv d2">
     <div class="scr-cap">
       <div class="scr-cap-ico">📁</div>
@@ -912,9 +973,9 @@
       <div class="scr-cap-d">Syntax highlight, line numbers, cursor tracking, multi-tab</div>
     </div>
     <div class="scr-cap">
-      <div class="scr-cap-ico">💬</div>
-      <div class="scr-cap-t">AI Chat</div>
-      <div class="scr-cap-d">Streaming responses, save-as-file button, strategy selector</div>
+      <div class="scr-cap-ico">📋</div>
+      <div class="scr-cap-t">Live Logs + Stdin</div>
+      <div class="scr-cap-d">Script output streams here. Type input to the running process live</div>
     </div>
     <div class="scr-cap">
       <div class="scr-cap-ico">⚡</div>
@@ -959,7 +1020,101 @@
   </div>
 </section>
 
-<!-- ─── NEW PROJECT MODE ─── -->
+<!-- ─── LIVE SCRIPT EXECUTION ─── -->
+<section id="live-exec" class="le-sec">
+  <div class="con">
+    <p class="slbl rv">Live Script Execution</p>
+    <h2 class="stit rv d1">Run any script.<br>Talk to it live.</h2>
+    <p class="ssub rv d2">Real-time stdout/stderr streaming directly to the Logs tab. Type into your running script's stdin without leaving the IDE — works for every supported language.</p>
+  </div>
+
+  <div class="le-grid con">
+
+    <!-- Left: terminal mockup -->
+    <div class="le-term rv">
+      <div class="le-h">
+        <span class="le-htl">▶ RUNNING — evolutionary_trainer.py</span>
+        <span class="le-badge run">● LIVE</span>
+      </div>
+      <div class="le-out">
+        <span class="ls">[08:41:02] ▶ evolutionary_trainer.py</span>
+        <span class="lo">────────────────────────────────────</span>
+        <span class="lo">Loading config… 26 tickers active</span>
+        <span class="lo">Feature extraction: 90 features OK</span>
+        <span class="lo">Generation 1 / 50 — pop=120</span>
+        <span class="lo">  best_f1=0.612 · avg=0.541</span>
+        <span class="lo">Generation 2 / 50 — pop=120</span>
+        <span class="lo">  best_f1=0.644 · avg=0.573 ↑</span>
+        <span class="lp">Checkpoint saved → gen_002.pkl</span>
+        <span class="lo">Generation 3 / 50 — pop=120</span>
+        <span class="lo">  best_f1=0.661 · avg=0.591 ↑</span>
+        <span class="lo">Waiting for user input…</span>
+        <span class="lp">&gt;&gt; show top</span>
+        <span class="lo">Rank 1: AAPL  f1=0.74  trades=142</span>
+        <span class="lo">Rank 2: MSFT  f1=0.71  trades=118</span>
+        <span class="lo">Rank 3: NVDA  f1=0.69  trades=97</span>
+        <span class="ls">&gt;&gt; continue<span class="cur"></span></span>
+      </div>
+      <div class="le-stdin">
+        <span class="le-stdin-prompt">↳</span>
+        <div class="le-stdin-field">continue</div>
+        <div class="le-stdin-btn">⏎ Send</div>
+      </div>
+    </div>
+
+    <!-- Right: language grid + feature list -->
+    <div class="rv d1">
+      <div class="le-langs">
+        <div class="le-lang"><div class="le-lico">🐍</div><div><div class="le-lname">Python</div><div class="le-lext">.py · input()</div></div></div>
+        <div class="le-lang"><div class="le-lico">📜</div><div><div class="le-lname">JavaScript</div><div class="le-lext">.js .mjs · readline</div></div></div>
+        <div class="le-lang"><div class="le-lico">📘</div><div><div class="le-lname">TypeScript</div><div class="le-lext">.ts · ts-node</div></div></div>
+        <div class="le-lang"><div class="le-lico">💎</div><div><div class="le-lname">Ruby</div><div class="le-lext">.rb · gets</div></div></div>
+        <div class="le-lang"><div class="le-lico">🐘</div><div><div class="le-lname">PHP</div><div class="le-lext">.php · fgets(STDIN)</div></div></div>
+        <div class="le-lang"><div class="le-lico">🐹</div><div><div class="le-lname">Go</div><div class="le-lext">.go · go run</div></div></div>
+        <div class="le-lang"><div class="le-lico">🌙</div><div><div class="le-lname">Lua</div><div class="le-lext">.lua · io.read()</div></div></div>
+        <div class="le-lang"><div class="le-lico">🦀</div><div><div class="le-lname">Perl</div><div class="le-lext">.pl · &lt;STDIN&gt;</div></div></div>
+        <div class="le-lang"><div class="le-lico">📊</div><div><div class="le-lname">R</div><div class="le-lext">.r · readline()</div></div></div>
+        <div class="le-lang"><div class="le-lico">⚡</div><div><div class="le-lname">Shell</div><div class="le-lext">.sh .bash · read</div></div></div>
+        <div class="le-lang"><div class="le-lico">🪟</div><div><div class="le-lname">Batch / PS1</div><div class="le-lext">.bat .cmd .ps1</div></div></div>
+        <div class="le-lang" style="border-color:rgba(99,102,241,.28)"><div class="le-lico">🔍</div><div><div class="le-lname">+ Shebang</div><div class="le-lext">Any #! executable</div></div></div>
+      </div>
+
+      <div class="le-feats">
+        <div class="le-feat">
+          <div class="le-fico">🔴</div>
+          <div>
+            <div class="le-ft">Color-coded live output</div>
+            <div class="le-fd">stdout in white, stderr in red, system messages in purple. Each line tagged with timestamp. Auto-scrolls to bottom.</div>
+          </div>
+        </div>
+        <div class="le-feat">
+          <div class="le-fico">⌨️</div>
+          <div>
+            <div class="le-ft">Interactive stdin — always open</div>
+            <div class="le-fd">stdin pipe stays open for the full duration of the script. Type any input, press Enter or click ⏎ to send. The field enables when the script starts and locks after it exits.</div>
+          </div>
+        </div>
+        <div class="le-feat">
+          <div class="le-fico">🔒</div>
+          <div>
+            <div class="le-ft">Queue-based delivery — no race conditions</div>
+            <div class="le-fd">Input is queued and pumped via an asyncio coroutine running alongside the output readers. Thread-safe from Qt main thread. No pipe-closed errors.</div>
+          </div>
+        </div>
+        <div class="le-feat">
+          <div class="le-fico">🎯</div>
+          <div>
+            <div class="le-ft">Shebang auto-detection</div>
+            <div class="le-fd">Unknown extension? Sherlock reads the first line of the file. If it contains a <code>#!</code> shebang, that interpreter is used automatically.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section id="new-project" class="np-sec">
   <div class="con">
     <p class="slbl rv">New Project Mode</p>
@@ -1225,7 +1380,7 @@
     <div class="fmc rv d2"><div class="fmico">🤖</div><div class="fmt">ML Model Files</div><div class="fmd">NumPy arrays report shape + stats. Pickle objects expose type and attributes. PyTorch state dicts list layers. HDF5 enumerates keys.</div><div class="fmtypes"><span class="fty">.npy</span><span class="fty">.npz</span><span class="fty">.pkl</span><span class="fty">.pt</span><span class="fty">.h5</span><span class="fty">.joblib</span></div></div>
     <div class="fmc rv"><div class="fmico">📉</div><div class="fmt">Smart Log Compression</div><div class="fmd">Logs compressed while preserving 100% of errors and tracebacks. Progress bars deduped. Metrics sampled. 8000-char cap.</div><div class="fmtypes"><span class="fty">errors kept</span><span class="fty">tracebacks kept</span><span class="fty">metrics sampled</span></div></div>
     <div class="fmc rv d1"><div class="fmico">🧹</div><div class="fmt">Unicode Sanitizer</div><div class="fmd">Zero-width spaces, BOM, soft hyphens, smart quotes, en/em dashes inside code blocks, mixed CRLF — all normalized automatically before patch extraction.</div><div class="fmtypes"><span class="fty">ZWSP</span><span class="fty">BOM</span><span class="fty">curly quotes</span><span class="fty">em-dash</span></div></div>
-    <div class="fmc rv d2"><div class="fmico">⚡</div><div class="fmt">Script Runner</div><div class="fmd">Async subprocess with real-time stdout/stderr streaming. Auto-stdin sequences. Configurable timeout up to 999h. Env var injection.</div><div class="fmtypes"><span class="fty">.py</span><span class="fty">.sh</span><span class="fty">.bat</span><span class="fty">.ps1</span><span class="fty">auto-stdin</span></div></div>
+    <div class="fmc rv d2"><div class="fmico">▶️</div><div class="fmt">Script Runner — 15+ Languages</div><div class="fmd">Async subprocess with real-time stdout/stderr streaming to the Logs tab. Interactive stdin always open — send input live while the script runs. Queue-based delivery, no race conditions. Shebang auto-detection for unlisted extensions.</div><div class="fmtypes"><span class="fty">.py</span><span class="fty">.js .ts</span><span class="fty">.rb</span><span class="fty">.php</span><span class="fty">.go</span><span class="fty">.lua</span><span class="fty">.pl</span><span class="fty">.r</span><span class="fty">.sh</span><span class="fty">.ps1</span><span class="fty">#! shebang</span></div></div>
   </div>
 </section>
 
@@ -1301,9 +1456,9 @@
   </div>
 
   <div class="rgrid">
-    <div class="rcard rv"><div class="rct">Requirements</div><ul class="rcl"><li>Python 3.11+</li><li>PyQt6 ≥ 6.6</li><li>aiohttp ≥ 3.9</li><li>aiofiles ≥ 23.2</li></ul></div>
+    <div class="rcard rv"><div class="rct">Requirements</div><ul class="rcl"><li>Python 3.11+</li><li>PyQt6 ≥ 6.6</li><li>aiohttp ≥ 3.9</li><li>aiofiles ≥ 23.2</li><li>openpyxl (optional)</li></ul></div>
     <div class="rcard rv d1"><div class="rct">Tested Models</div><ul class="rcl"><li>deepseek-coder-v2</li><li>gemini-2.0-flash</li><li>gpt-4o, claude-3.5</li><li>codestral, llama3.3</li></ul></div>
-    <div class="rcard rv d2"><div class="rct">Platforms</div><ul class="rcl"><li>Windows 10/11</li><li>macOS 12+</li><li>Linux Ubuntu 20+</li><li>Any Python 3.11 env</li></ul></div>
+    <div class="rcard rv d2"><div class="rct">Run Scripts</div><ul class="rcl"><li>.py .js .ts .rb .php</li><li>.go .lua .pl .r .jl</li><li>.sh .bash .bat .ps1</li><li>#! shebang detection</li></ul></div>
   </div>
 </section>
 
@@ -1386,7 +1541,7 @@
     <h2 class="ctat rv">Start deducing.<br>Stop guessing.</h2>
     <p class="ctasub rv d1">Set a goal. Configure a pipeline. Let Sherlock iterate until your model converges, your tests pass, or your bug disappears.</p>
     <div class="ctabt rv d2">
-      <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp blg bgrad">⬇&nbsp; Download v2.1</a>
+      <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp blg bgrad">⬇&nbsp; Download v2.2</a>
       <a href="https://github.com/signupss/ai-code-sherlock" class="btn bo blg" target="_blank" rel="noopener">⭐&nbsp; Star on GitHub</a>
       <a href="#donate" class="btn bo blg">💙&nbsp; Support</a>
     </div>
@@ -1415,6 +1570,7 @@
         <ul class="flinks">
           <li><a href="#features">Features</a></li>
           <li><a href="#pipeline">Pipeline</a></li>
+          <li><a href="#live-exec">Live Execution</a></li>
           <li><a href="#new-project">New Project</a></li>
           <li><a href="#consensus">Consensus</a></li>
           <li><a href="#error-map">Error Map</a></li>
@@ -1442,7 +1598,7 @@
       </div>
     </div>
     <div class="fbot">
-      <p class="fcopy">Built with <span>❤</span> for developers who demand precision · MIT License · v2.1.0</p>
+      <p class="fcopy">Built with <span>❤</span> for developers who demand precision · MIT License · v2.2.0</p>
       <div class="flegal">
         <a href="https://github.com/signupss/ai-code-sherlock/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
         <a href="https://github.com/signupss/ai-code-sherlock/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
