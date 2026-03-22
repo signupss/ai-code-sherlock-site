@@ -57,10 +57,10 @@
         "url": "https://ai-code-sherlock-site.vercel.app/",
         "downloadUrl": "https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip",
         "installUrl": "https://github.com/signupss/ai-code-sherlock",
-        "softwareVersion": "2.2.0",
-        "releaseNotes": "Interactive stdin for 15+ script languages, live output streaming to Logs tab, queue-based stdin pump, shebang auto-detection, scroll fixes, i18n expansion",
-        "datePublished": "2024-01-01",
-        "dateModified": "2025-03-22",
+        "softwareVersion": "2.3.0",
+        "releaseNotes": "4 UI themes with live switching, infinite loop guard in pipeline, companion context scripts, full light-theme coverage across all dialogs, theme-aware editor scrollbars, ACTIVE badge fix",
+        "datePublished": "2026-03-21",
+        "dateModified": "2026-03-23",
         "applicationCategory": "DeveloperApplication",
         "applicationSubCategory": "IDE, Code Analysis, AI Assistant",
         "operatingSystem": ["Windows 10", "Windows 11", "macOS 12+", "Linux Ubuntu 20+"],
@@ -93,7 +93,11 @@
           "15+ script languages — Python, JS, TS, Ruby, PHP, Go, Lua, Perl, R, Julia, Shell, Batch, PowerShell, shebang auto-detection",
           "Live script output streaming to dedicated Logs tab",
           "Queue-based stdin pump — no race conditions, no closed-pipe errors",
-          "Scroll-enabled sub-panels — Logs, Context, Signals, Auto-run tabs"
+          "Scroll-enabled sub-panels — Logs, Context, Signals, Auto-run tabs",
+          "4 UI themes — Dark (Tokyo Night), Light, Monokai, Dracula + custom accent color",
+          "Infinite loop guard — auto-detects repeated pipeline errors, kills process, rolls back, re-patches",
+          "Companion Scripts — add read-only context scripts to pipeline; AI sees but never runs or patches them",
+          "Full light-theme coverage — all dialogs theme-aware, no hardcoded dark colors"
         ],
         "keywords": "AI code assistant, code debugging, automatic patching, Ollama IDE, code analysis, LLM coding, autonomous improvement, open source",
         "author": {
@@ -691,7 +695,7 @@
   </ul>
   <div class="nact">
     <a href="#install" class="btn bo">Install</a>
-    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp">⬇ Download v2.2</a>
+    <a href="https://github.com/signupss/ai-code-sherlock/archive/refs/heads/main.zip" class="btn bp">⬇ Download v2.3</a>
   </div>
 </nav>
 
@@ -700,7 +704,7 @@
   <div class="gbg"></div>
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 
-  <div class="hbadge">v2.2 — Interactive Script Runner · 15+ Languages · Live Logs</div>
+  <div class="hbadge">v2.3 — 4 Themes · Loop Guard · Companion Scripts</div>
 
   <h1>
     <span class="hp">The Ultimate AI Detective</span>
@@ -871,7 +875,7 @@
     <div class="scr-frame">
       <div class="scr-bar">
         <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
-        <div class="scr-btl">AI Code Sherlock v2.2 — data_universe.py — gemini-2.0-flash-preview</div>
+        <div class="scr-btl">AI Code Sherlock v2.3 — data_universe.py — gemini-3.0-flash-preview</div>
       </div>
       <!-- Try real screenshot first, fallback to mockup via JS -->
       <img src="screenshot.png" alt="AI Code Sherlock interface — 4 panel layout with file tree, code editor, AI chat, and patch review" class="scr-img" id="scrImg" onerror="this.style.display='none';document.getElementById('scrMock').style.display='grid'" />
@@ -1598,7 +1602,7 @@
       </div>
     </div>
     <div class="fbot">
-      <p class="fcopy">Built with <span>❤</span> for developers who demand precision · MIT License · v2.2.0</p>
+      <p class="fcopy">Built with <span>❤</span> for developers who demand precision · MIT License · v2.3.0</p>
       <div class="flegal">
         <a href="https://github.com/signupss/ai-code-sherlock/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
         <a href="https://github.com/signupss/ai-code-sherlock/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
